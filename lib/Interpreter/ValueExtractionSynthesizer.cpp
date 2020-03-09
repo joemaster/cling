@@ -405,7 +405,7 @@ namespace {
     }
     LookupResult R(*m_Sema, &m_Context->Idents.get("setValueNoAlloc"),
                    SourceLocation(), Sema::LookupOrdinaryName,
-                   Sema::ForRedeclaration);
+                   Sema::ForVisibleRedeclaration);
 
     m_Sema->LookupQualifiedName(R, NSD);
     assert(!R.empty()
