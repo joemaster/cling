@@ -218,8 +218,8 @@ namespace {
 
     // Build a reference to Value* in the wrapper, should be
     // the only argument of the wrapper.
-    SourceLocation locStart = (E) ? E->getLocStart() : FD->getLocStart();
-    SourceLocation locEnd = (E) ? E->getLocEnd() : FD->getLocEnd();
+    SourceLocation locStart = (E) ? E->getBeginLoc() : FD->getBeginLoc();
+    SourceLocation locEnd = (E) ? E->getEndLoc() : FD->getEndLoc();
     ExprResult wrapperSVRDRE
       = m_Sema->BuildDeclRefExpr(FD->getParamDecl(0), m_Context->VoidPtrTy,
                                  VK_RValue, locStart);

@@ -1672,7 +1672,7 @@ namespace cling {
           // memory corruption on the OpaqueValueExpr. See ROOT-7749.
           clang::QualType NonRefQT(QT.getNonReferenceType());
           ExprMemory.resize(++nargs);
-          new (&ExprMemory[nargs-1]) OpaqueValueExpr(TSI->getTypeLoc().getLocStart(),
+          new (&ExprMemory[nargs-1]) OpaqueValueExpr(TSI->getTypeLoc().getBeginLoc(),
                                                      NonRefQT, VK);
         }
         // Type names should be comma separated.
