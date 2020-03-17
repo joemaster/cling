@@ -1376,7 +1376,7 @@ namespace cling {
                              /*AllowDestructorName*/true,
                              /*AllowConstructorName*/true,
                              /*AllowDeductionGuide*/ false,
-                             ParsedType(), TemplateKWLoc,
+                             ParsedType(), &TemplateKWLoc,
                              FuncId)) {
       // Failed parse, cleanup.
       return false;
