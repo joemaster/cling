@@ -1227,7 +1227,7 @@ namespace cling {
         // Double check const-ness.
         if (const clang::CXXMethodDecl *md =
             llvm::dyn_cast<clang::CXXMethodDecl>(TheDecl)) {
-          if (md->getTypeQualifiers() & clang::Qualifiers::Const) {
+          if (md->getMethodQualifiers() & clang::Qualifiers::Const) {
             if (!objectIsConst) {
               TheDecl = 0;
             }
