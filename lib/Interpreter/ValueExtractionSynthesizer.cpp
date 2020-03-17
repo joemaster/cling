@@ -326,7 +326,7 @@ namespace {
                                    /*initializer*/E
                                    );
         // Handle possible cleanups:
-        Call = m_Sema->ActOnFinishFullExpr(Call.get());
+        Call = m_Sema->ActOnFinishFullExpr(Call.get(), /*DiscardedValue*/ false);
       }
     }
     else {
